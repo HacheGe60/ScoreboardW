@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solo Project: Basketball Scorecard</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+            integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="scoreboard">
+                <div class="scores">
+                    <h3 class="title">HOME</h3>
+                    <div class="score">
+                        <p id="scoreHome">0</p>
+                    </div>
+                    <div class="fouls">
+                        <p class="foul-title">FOULS</p>
+                        <p id="foulHome" class="foul">
+                            0
+                        </p>
+                    </div>
+                </div>
+                <div class="center">
+                    <div class="time">
+                        <span id="minute" class="time-container">00</span><span id="colon">:</span><span id="second"
+                            class="time-container">00</span>
+                    </div>
+                    <div class="periods">
+                        <p class="period-title">PERIOD</p>
+                        <p id="period" class="period"></p>
+                    </div>
+                    <div class="bonus">
+                        <p id="bonHome"><i class="fa-solid fa-caret-left darkRed" id="bonHomeIcon"></i></p>
+                        <p>BONUS</p>
+                        <p id="bonGuest"><i class="fa-solid fa-caret-right darkRed" id="bonGuestIcon"></i></p>
+                    </div>
+                    <div class="poss">
+                        <p id="possHome"><i class="fa-solid fa-caret-left darkRed" id="possHomeIcon"></i></p>
+                        <p>POSS</p>
+                        <p id="possGuest"><i class="fa-solid fa-caret-right darkRed" id="possGuestIcon"></i></p>
+                    </div>
+                    <div class="clubShield">
+                        <img src="gimnasia-y-esgrima-de-la-plata-logo-0.png" alt="shield club">
+                    </div>
+                </div>
+                <div class="scores">
+                    <h3 class="title">GUEST</h3>
+                    <div class="score">
+                        <p id="scoreGuest">0</p>
+                    </div>
+                    <div class="fouls">
+                        <p class="foul-title">FOULS</p>
+                        <p id="foulGuest" class="foul">
+                            0
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="keyboard">
+                <div class="home">
+                    <h3 class="keyTitle">HOME</h3>
+                    <div class="btns">
+                        <button class="btn" id="btn1Home" onclick="homeScore1()">+1</button>
+                        <button class="btn" id="btn2Home" onclick="homeScore2()">+2</button>
+                        <button class="btn" id="btn3Home" onclick="homeScore3()">+3</button>
+                    </div>
+                    <div class="foulKey">
+                        <p class="foulKey-title">Fouls</p>
+                        <button class="foulBtn green" id="foulHomeBtn" onclick="homeFoul()">Home</button>
+                        <button class="foulBtn" id="foulHomeResetBtn" onclick="resetHomeFoul()">Reset</button>
+                    </div>
+                </div>
+                <div class="generic">
+                    <h3 class="keyTitle">TIME</h3>
+                    <div class="timeKey">
+                        <button class="timeBtn" id="startBtn" onclick="startTimer()">START</button>
+                        <button class="timeBtn yellow" id="pauseBtn" onclick="pauseTimer()">PAUSE</button>
+                        <button class="timeBtn red" id="resetBtn" onclick="resetTimer()">RESET</button>
+                    </div>
+                    <div class="periodKey">
+                        <p class="periodKey-title">Period</p>
+                        <button class="timeBtn" onclick="nextPeriod()">+1</button>
+                        <button class="timeBtn red" id="resetPeriodBtn" onclick="resetPeriod()">RESET</button>
+                    </div>
+                    <div class="possKey">
+                        <p class="possKey-title">Poss</p>
+                        <button class="timeBtn" onclick="homePoss()"><i class="fa-solid fa-caret-left"></i></button>
+                        <button class="timeBtn" onclick="guestPoss()"><i class="fa-solid fa-caret-right"></i></button>
+                    </div>
+                    <div class="reset">
+                        <button class="reset-btn" id="resetAllBtn" onclick="resetAll()">Reset All</button>
+                    </div>
+                </div>
+                <div class="guest">
+                    <h3 class="keyTitle">GUEST</h3>
+                    <div class="btns">
+                        <button class="btn" id="btn1Guest" onclick="guestScore1()">+1</button>
+                        <button class="btn" id="btn2Guest" onclick="guestScore2()">+2</button>
+                        <button class="btn" id="btn3Guest" onclick="guestScore3()">+3</button>
+                    </div>
+                    <div class="foulKey">
+                        <p class="foulKey-title">Fouls</p>
+                        <button class="foulBtn green" id="foulGuestBtn" onclick="guestFoul()">Guest</button>
+                        <button class="foulBtn" id="foulGuestResetBtn" onclick="resetGuestFoul()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 40rem;
+    height: 24.0625rem;
+    background-color: #1b244a;
+}
+
+.scores {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.title {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #eeeeee;
+    font-size: 2.5rem;
+}
+
+.score {
+    width: 9.6875rem;
+    height: 7.5rem;
+    background-color: #080001;
+    border-radius: 0.625rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.score p {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    color: #f94f6d;
+    font-size: 5.625rem;
+    margin: 0;
+    margin-bottom: -1rem;
+    margin-right: .5rem;
+}
+
+.btns {
+    width: 9.6875rem;
+    height: 2.8125rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    width: 2.8125rem;
+    height: 2.8125rem;
+    background-color: #1b244a;
+    border-radius: 0.5rem;
+    border: 2px solid #9aabd8;
+    color: #9aabd8;
+    font-weight: bold;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.time {
+    margin: 0;
+    width: 9.6875rem;
+    height: 7.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #eeeeee;
+    font-size: 4rem;
+}
+
+.time-container {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    color: rgb(185, 185, 0);
+    font-size: 5.625rem;
+    margin: 0;
+    padding: 0.5rem 0.5rem 0;
+    background-color: #080800;
+    border-radius: 0.625rem;
+}
+
+.periods {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 9.6875rem;
+    height: 2.8125rem;
+    color: #eeeeee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.period-title {
+    margin: 0;
+    color: #eeeeee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.period {
+    color: #108800;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5rem 0.5rem 0;
+    background-color: #080800;
+    border-radius: 0.625rem;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+}
+
+.bonus,
+.poss {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 9.6875rem;
+    height: 2.8125rem;
+    color: #eeeeee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+.poss {
+    margin: 0;
+    margin-top: -1rem;
+}
+
+#bonHome,
+#bonGuest,
+#possHome,
+#possGuest {
+    font-family: 'Cursed Timer ULiL', sans-serif;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.fouls {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 9.6875rem;
+    height: 2.8125rem;
+    color: #eeeeee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.foul-title {
+    margin: 0;
+}
+
+.foul {
+    margin: 0;
+    color: #108800;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0.5rem 0.5rem 0;
+    background-color: #080800;
+    border-radius: 0.625rem;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+}
+
+.players {
+    margin: 0;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 9.6875rem;
+    height: 2.8125rem;
+    color: #eeeeee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.player-title {
+    margin: 0;
+}
+
+.number,
+.foulNumber {
+    width: 50px;
+    margin: 0;
+    color: #ff2424;
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 0.5rem 0.5rem 0;
+    background-color: #080800;
+    border-radius: 0.625rem;
+    font-family: 'Cursed Timer ULiL', sans-serif;
+}
+
+.keyboard {
+    width: 40rem;
+    height: 24rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    background-color: #666666;
+    color: #eeeeee;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.foulBtn {
+    background-color: #333333;
+    color: #ff2424;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
+    border: 2px solid #ff2424;
+    cursor: pointer;
+}
+
+.timeBtn {
+    background-color: #333333;
+    color: #108800;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
+    border: 2px solid #108800;
+    cursor: pointer;
+}
+
+.yellow {
+    color: yellow;
+    border: 2px solid yellow;
+}
+
+.red {
+    color: #ff2424;
+    border: 2px solid #ff2424;
+}
+
+
+.darkRed {
+    color: #610000;
+}
+
+.green {
+    color: #108800;
+    border: 2px solid #108800;
+}
+
+.possKey .timeBtn {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.periodKey-title,
+.possKey-title,
+.bonusKey-title,
+.foulKey-title {
+    margin-bottom: 0.5rem;
+}
+
+.keyTitle,
+.btns,
+.timeKey,
+.periodKey,
+.possKey,
+.foulKey {
+    margin-bottom: 1rem;
+}
+
+.clubShield img {
+    width: 8rem;
+    margin: -1rem;
+    padding: 0;
+}
+
+.reset-btn {
+    background: #ff2424;
+    color: #f5f5f5;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.625rem;
+    border: 2px solid #f5f5f5;
+    cursor: pointer;
+}
